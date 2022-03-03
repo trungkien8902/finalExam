@@ -1,10 +1,9 @@
-
 body {
     margin: auto;
     padding: 0;
     box-sizing: border-box;
     max-width: 1438px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -12,13 +11,41 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 0;
 }
 
-/* header */
+.shape1 {
+    background: url(./img/Shape1.png) center no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 191px;
+}
+
+.shape2 {
+    position: absolute;
+    width: 100%;
+    height: 191px;
+} 
+
+/*----------------- header ------------------*/
 header {
-    max-width: 1312px;
+    background: url(./img/Shape1.png) center no-repeat;
+    max-width: 1438px;
     margin: auto;
+    position: absolute;
+    width: 100%;
+    height: 191px;
+}
+
+.container-header {
+
     display: flex;
-    margin-top: 35px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 35px 60px 0 60px;
     justify-content: space-between;
+}
+
+.bar {
+    font-size: 36px;
+    display: none;
 }
 
 .nav {
@@ -26,11 +53,8 @@ header {
     align-items: center;
 }
 
-.menu {
-    display: flex;
-}
-
 .menu li {
+    display: inline-block;
     list-style: none;
     margin-right: 43px;
 }
@@ -42,6 +66,7 @@ header {
     text-decoration: none;
     font-size: 16.667px;
     line-height: 1.2;
+    letter-spacing: 3px;
 }
 
 .search {
@@ -51,25 +76,33 @@ header {
     height: 51px;
 }
 
-/* section */
-section {
-    max-width: 1438px;
-    margin: auto;
-    margin-top: 60px;
+.search_result{
+    font-size: 30px;
+    margin: 12px 20px 0 120px;
+    color: #68635f;
 }
 
-/* group1 */
+/*------------- section -------------*/
+
+/*-------------- group1 -------------*/
 .group1 {
-    background-image: url(./img/Image.png);
+    background: url(./img/Shape1.png) top center ;
+    background: url(./img/Image.png);
     height: 957px;
     padding-left: 82px;
+}
+
+.group1 .shape2 {
+    background: url(./img/Shape2.png) center no-repeat;
+    left: 0;
+    top: 812px;
 }
 
 .group1 .title {
     color: #deb37e;
     font-weight: bold;
-    font-style: italic;
     font-size: 90px;
+    text-shadow: 5px 2px 4px #d7d5d1;
     padding-top: 184px;
     margin: 0;
 }
@@ -114,58 +147,53 @@ section {
     margin-top: 27px;
 }
 
-/* group2 */
+/*--------------- group2 ---------------*/
 .group2 {
+    background: url(./img/shadowG2.png) left bottom no-repeat;
     text-align: center;
     margin-top: 60px;
 }
 .group2 .title {
-    font-size: 82px;
+    font-size: 62.5px;
     color: rgb(226, 163, 85);
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.2;
+    margin-bottom: 49px;
 }
 
 .group2 p {
     font-size: 27.08px;
-    font-family: "Georgia";
     color: rgb(127, 119, 112);
     line-height: 1.2;
     text-align: center;
     margin: 0;
 }
 
-.group2 .content {
+.group2 .list-item {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 81px;
-    width: 1174px;
-    margin: 100px auto;
+    margin: 76px 100px 55px;
 }
 
-.group2 .content1, .group2 .content2, .group2 .content3 {
+.group2 .content {
     background-color: #7f7770;
 }
 
-.group2 .content1, .group2 .content2, .group2 .content3 {
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-.group2 .content img {
+.group2 .list-item img {
     width: 339px;
     height: 301px;
 }
 
-.group2 .content h1 {
+.group2 .list-item h1 {
     color: #fff;
     font-size: 29.17px;
     text-align: left;
     padding: 57px 0 0 13px;
 }
 
-.group2 .content p {
+.group2 .list-item p {
     color: #fff;
     font-size: 22.92px;
     text-align: left;
@@ -193,48 +221,50 @@ section {
     cursor: pointer;
 }
 
-/* group3 */
+/*--------------- group3 -------------*/
 .group3 {
     position: relative;
 }
-.group3 .img1 {
-    background-color: #7f7770;
+.group3 .item1 {
     display: flex;
     color: #fff;
 }
 
-.group3 .img1 h1{
+.group3 .item1 h1{
     padding: 201px 0 0 60px;
     font-size: 58.33px;
 }
 
-.group3 .img1 p {
+.group3 .item1 p {
     padding-left: 60px;
     margin-top: 50px;
     font-size: 29.17px;
 }
 
-.group3 .img2 {
-    background-color: #deb37e;
+.group3 .content-text-1 {
+    background-color: #7f7770;
+    width: 100%;
+}
+
+.group3 .item2 {
     display: flex;
     color: #fff;
 }
 
-.group3 .img2 img{
-    margin-left: 200px;
-    position: absolute;
-    right: 0;
-}
-
-.group3 .img2 h1{
+.group3 .item2 h1{
     font-size: 58.33px;
     padding: 200px 0 0 143px;
 }
 
-.group3 .img2 p {
+.group3 .item2 p {
     margin-top: 50px;
     font-size: 29.17px;
     padding-left: 139px;
+}
+
+.group3 .content-text-2 {
+    background-color: #deb37e;
+    width: 100%;
 }
 
 .group3 .btnRead {
@@ -258,19 +288,20 @@ section {
     cursor: pointer;
 }
 
-.group3 .img2 .btnRead {
+.group3 .item2 .btnRead {
     padding: 29px 69px;
     margin: 51px 0 131px 149px;
 }
 
-.group3 .img2 .btnRead a{
+.group3 .item2 .btnRead a{
     font-size: 23.15px;
 }
 
-/* group4 */
+/*-------------- group4 -------------*/
 .group4 {
-    background-color: #99928d;
+    background: #99928d url(./img/shadowG2.png) left center no-repeat;
     text-align: center;
+    position: relative;
 }
 
 .group4 h1{
@@ -283,13 +314,25 @@ section {
     color: rgb(219, 219, 219);
     font-size: 29.17px;
     margin-top: 43px;
-    padding-bottom: 214px;
+    padding-bottom: 300px;
 }
 
-/* group5 */
+/*-------------- group5 ----------------*/
 .group5 {
     background-image: url(./img/imgGroup5.png);
     height: 1114px;
+    position: relative;
+}
+
+.group5 .shape1 {
+    background-image: url(./img/Shape2G5.png);
+    height: 330px;
+    top: -70px;
+}
+
+.group5 .shape2 {
+    background-image: url(./img/Shape2.png);
+    top: 940px;
 }
 
 .group5 .title {
@@ -298,33 +341,29 @@ section {
 
 .group5 h1 {
     text-align: right;
-    font-style: italic;
     font-weight: bold;
     color: #54524f;
     font-size: 72px;
+    text-shadow: 4px -3px 4px #bbbab7;
 }
 
 .group5 h1:first-child {
     color: #deb37e;
 }
 
-/* group6 */
+/*------------- group6 -------------*/
 .group6 {
+    background: #fff url(./img/ShadowG6.png) right bottom no-repeat;
     text-align: center;
     color: #3f3f3f;
     margin-bottom: 60px;
 }
 
-.group6 .content {
+.group6 .list-item {
     display: flex;
-    justify-content: space-between;
-    width: 1174px;
-    margin: 200px auto;
+    justify-content: space-around;
     text-align: left;
-}
-
-.group6 .content1,.group6 .content2,.group6 .content3 {
-    background-color: #fff;
+    margin: 22px 200px 252px;
 }
 
 .group6 .content h1{
@@ -349,10 +388,23 @@ section {
     margin-top: 35px;
 }
 
-/* group7 */
+/*------------- group7 --------------*/
 .group7 {
     background-color: #deb37e;
     text-align: center;
+    position: relative;
+}
+
+.group7 .shape1 {
+    background-image: url(./img/Shape1G7.png);
+    height: 210px;
+    top: -50px;
+}
+
+.group7 .shape2 {
+    background-image: url(./img/Shape2G7.png);
+    height: 187px;
+    top: 788px;
 }
 
 .group7 h1{
@@ -382,11 +434,12 @@ section {
 
 .group7 .email label {
     margin-left: -50px;
-    padding: 19px 30px 14px 30px;
+    padding: 15px 30px 13px 30px;
     color: #fff;
     background-color: #54524f;
     border-radius: 100px;
     font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .group7 .email label:hover {    
@@ -394,17 +447,16 @@ section {
     cursor: pointer;
 }
 
-/* footer */
+/*-------------- footer --------------*/
 footer {
     background-color: #7f7770;
 }
 
 .container-footer {
-    max-width: 1258px;
-    margin: auto;
     display: flex;
     justify-content: space-between;
-    padding: 200px 0;
+    padding: 300px 0 200px 0;
+    margin: 0 80px;
 }
 
 footer ul {
@@ -419,6 +471,7 @@ footer ul li {
 }
 
 footer .title-f {
+    color: #fff;
     list-style: none;
     padding-top: 10px;
     font-size: 31.6px;
@@ -445,5 +498,175 @@ footer .social-media {
     display: flex;
     padding-top: 30px;
 }
+
+
+/*---------------- Responsive -------------*/
+@media screen and (max-width: 768px) {
+
+    /*----------- header ----------*/
+    header .shape1 {
+        left: 0;
+        top: 129px;
+    }
+
+    .container-header {
+        margin: 0;
+    }
+    
+    .bar {
+        display: block;
+    }
+    
+    .nav {
+        display: none;
+        background-color: #fff;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .menu li {
+        display: block;
+        margin: 10px;
+    }
+
+    /*------------ group1 -----------*/
+    .group1 .shape2 {
+        left: 0px;
+    }
+
+    /*------------- group2 ----------*/
+    .group2 .list-item {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 81px;
+        width: 768px;
+        margin: 100px auto;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .group2 .content {
+        margin: 30px;
+    }
+
+    .group2 .title {
+        font-size: 60px;
+    }
+
+    .group2 p {
+        font-size: 20px;
+    }
+
+    /*----------- group3 -----------*/
+    .group3 .item1 {
+        flex-direction: column;
+    }
+    
+
+    .group3 .item2 {
+        flex-direction: column-reverse;
+    }
+
+    .group3 .item1 h1{
+        padding: 100px 0 0 60px;
+        font-size: 50px;
+    }
+
+    .group3 .item1 p {
+        padding-left: 60px;
+        margin-top: 50px;
+        font-size: 20px;
+    }
+
+    .group3 .btnRead {
+        padding: 18px 28px;
+        margin: 52px 0 100px 60px;
+    }
+
+    .group3 .item2 h1 {
+        font-size: 50px;
+        padding: 100px 0 0 130px;
+    }
+
+    .group3 .item2 p {
+        margin-top: 30px;
+        font-size: 20px;
+        padding-left: 130px;
+    }
+
+    .group3 .item2 .btnRead {
+        padding: 20px 40px;
+        margin: 50px 0 100px 130px;
+    }
+
+    /*------------ group4 -----------*/
+    .group4 h1 {
+        font-size: 50px;
+    }
+
+    .group4 p {
+        font-size: 20px;
+    }
+
+    /*----------- group6 -------------*/
+    .group6 .list-item {
+        justify-content: space-around;
+        text-align: center;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .group6 .content {
+        margin: 30px;
+    }
+
+    .group6 p {
+        font-size: 18px;
+    }
+
+    .group6 p:last-child {
+        font-size: 18px;
+    }
+
+    /*----------- group7 -----------*/
+    .group7 h1 {
+        font-size: 50px;
+    }
+
+    .group7 p {
+        font-size: 20px;
+    }
+
+    /*------------- footer ----------*/
+    footer .title-f {
+        font-size: 20px;
+    }
+
+    footer ul li {
+        font-size: 18px;
+    }
+
+    .container-footer {
+        margin: 0 20px;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+}
+
+
 
 
